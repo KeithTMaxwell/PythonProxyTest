@@ -12,7 +12,7 @@ class UDPServer(UDPSocket):
 
     def test_func(self):
         while self.is_start:
-            msg, ip, port = self.receive()
+            msg, ip, port = self.receive(8192)
             print('message from ' + ip + ':' + str(port) + ' : ' + msg)
             self.send_to(msg, ip, port)
 

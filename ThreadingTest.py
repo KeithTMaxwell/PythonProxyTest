@@ -31,11 +31,12 @@ def func2():
         time.sleep(2)
 
 
-t1 = MyThread(func1, 'this', 'is', 'thread func1')
-t2 = MyThread(func2)
+if __name__ is '__main__':
+    t1 = MyThread(func1, 'this', 'is', 'thread func1')
+    t2 = MyThread(func2)
 
-t1.start()
-t2.start()
+    t1.start()
+    t2.start()
 
-t1.wait()
-t2.wait()
+    t1.wait()
+    t2.wait()

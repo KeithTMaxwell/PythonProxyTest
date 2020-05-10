@@ -1,0 +1,22 @@
+@startuml Porxy
+class Socket{
+    - ip
+    - port
+
+    + int setIpPort(ip, port)
+    + ip, port getIpPort()
+    + int bind(ip, port)
+    + int init()
+    
+}
+
+class Server{
+}
+
+class Client{
+}
+
+Server --> Socket
+Client --> Socket
+
+@enduml
