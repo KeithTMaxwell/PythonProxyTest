@@ -31,7 +31,7 @@ def func2():
         time.sleep(2)
 
 
-if __name__ is '__main__':
+if __name__ == '__main__':
     t1 = MyThread(func1, 'this', 'is', 'thread func1')
     t2 = MyThread(func2)
 
