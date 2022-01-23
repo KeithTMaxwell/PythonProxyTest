@@ -1,8 +1,5 @@
 from UDPSocket import UDPSocket
 
-server_ip = '192.168.124.13'
-server_port = 12345
-
 
 class UDPServer(UDPSocket):
     def __init__(self, ip, port):
@@ -17,5 +14,8 @@ class UDPServer(UDPSocket):
             self.send_to(msg, ip, port)
 
 
-server = UDPServer('192.168.124.13', 12345)
-server.test_func()
+if __name__ == "__main__":
+    server_ip = '192.168.28.126'
+    server_port = 12345
+    server = UDPServer(server_ip, server_port)
+    server.test_func()
